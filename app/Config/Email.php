@@ -48,7 +48,7 @@ class Email extends BaseConfig
     /**
      * SMTP Timeout (in seconds)
      */
-    public int $SMTPTimeout = 5;
+    public int $SMTPTimeout = 20;
 
     /**
      * Enable persistent SMTP connections
@@ -113,5 +113,5 @@ class Email extends BaseConfig
     /**
      * Enable notify message from server
      */
-    public bool $DSN = true;
+    public bool $DSN = false;
 }

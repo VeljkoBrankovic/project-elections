@@ -4,7 +4,6 @@ namespace App\Controllers;
 use App\Models\MemberModel;
 use App\Models\SectionModel;
 use App\Models\RegCenterModel;
-use App\Models\NominatedPeperModel;
 use App\Models\CandidateModel;
 use App\Models\NominatedPaperModel;
 
@@ -56,11 +55,7 @@ class Commission extends BaseController
 
         $candidateModel = new CandidateModel();
         $candidates = $candidateModel->getCandidatesDescBySection($id_section);
-        
-        var_dump($candidates);
-        $memberModel = new MemberModel();
-        $members = $memberModel->getMembersBySection($id_section);
-        //   $this->session->set('member', $member);
+    
         return view('candidacy_results', ['section' =>$section, 'reg_center'=>$regCenter, 'candidates' => $candidates, 
         'sentPaper'=> $sentPaper, 'nominatedPaper'=> $nominatedPaper]);
     }

@@ -1,3 +1,6 @@
+<?=$this->extend('default');?>
+
+<?= $this->section('mainSection')?>
 
 <h2>Login</h2>
 <?php
@@ -17,3 +20,5 @@ echo "<br>";
 echo form_submit("login", "Log in");
 echo form_close();
 ?>
+
+<?= $this->endSection();?>

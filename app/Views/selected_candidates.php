@@ -1,3 +1,7 @@
+<?=$this->extend('default');?>
+
+<?= $this->section('mainSection')?>
+
 <h3>Uspesno ste prosledili predlog za kandidata</h3>
 
 <?php 
@@ -26,3 +30,5 @@ if(isset($candidates)){
             ?>
         </table>
         <?php } }?>
+
+        <?= $this->endSection();?>

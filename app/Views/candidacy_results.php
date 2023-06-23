@@ -9,7 +9,11 @@ echo "<h2>Rezultati glasanja</h2>";
 echo "<p>Link za predlaganje kandidata je poslat na $sentPaper adrese.</p>";
 echo "<p>U kandidovanju je ucestvovalo $nominatedPaper clana komore. </p> ";
 echo "<p>Rang lista:  </p>";
-if(isset($candidates)){          
+if(isset($candidates)){  
+    if(sizeof($candidates)==0){
+        echo "Trenutno nema kandidovanih.";
+    }
+    else{          
     ?>
         <table border="1" cellpadding="2" cellspacing="1">
             <tr>
@@ -26,13 +30,14 @@ if(isset($candidates)){
                     <td>{$can->license_num}</td>
                     <td>{$can->votes_no}</td>";
                     $rb++;
-
             }
            echo "</tr>";
             ?>
-        </table>        
-        <?php        
-}
+        </table>  
+        <?php
+        echo "<br><br>";            
+    }
+}   
 ?>
 <?= $this->endSection();?>
 

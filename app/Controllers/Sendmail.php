@@ -28,7 +28,7 @@ class Sendmail extends BaseController
       $url = "Candidate/get_voter_list/$m->id";
       $link = anchor($url, 'Pogledaj');
       $email->setMessage("Postovani $m->name,\n ovde mozete videti kandidate \n". $link."\n Hvala");
-
+      var_dump($email);
       if ($email->send()) {
         echo ("Biracki spisak je uspesno prosledjen $m->surname $m->name. <br>");
       } else echo ("Doslo je do greske u slanju. Biracki spisak NIJE prosledjen $m->surname $m->name <br>");

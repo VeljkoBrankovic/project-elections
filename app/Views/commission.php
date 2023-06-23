@@ -1,4 +1,8 @@
-Dobrodosli, <?= $commision->name ?>
+<?=$this->extend('default');?>
+
+<?= $this->section('mainSection')?>
+
+Dobrodosli, <?= $commision->name ?> <?= $commision->surname ?>
 <br><br>
 Stranica za clana komisije
 <br><br>
@@ -9,3 +13,5 @@ Stranica za clana komisije
 3. <?= anchor("commission/get_candidacy_results/".$commision->id_section, "Pogledaj rezultate kandidovanja"); ?>
 <br><br>
 <?= anchor("commission/logout", "Log out"); ?>
+
+<?= $this->endSection();?>
